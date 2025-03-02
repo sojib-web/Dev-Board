@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css/style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.24/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="">
+    <header class="container mx-auto">
+      <nav class="">
+        <div class="navbar bg-base-100 rounded-lg drop-shadow-lg p-3">
+          <div class="flex-1">
+            <img src="./assets/logo.png" alt="" />
+            <a class="ml-5 text-2xl poppins-text"
+              >Dev<span class="font-bold">Board</span></a
+            >
+          </div>
+          <div class="flex-none gap-4">
+            <div>
+              <button id="" class="btn rounded-full font-bold text-xl">
+                <img src="./assets/checkbox.png" alt="" />
+                <p id="HeaderButton">23</p>
+              </button>
+            </div>
+
+            <div>
+              <img
+                onclick="changeColor()"
+                src="./assets/theme-btn.png"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <section class="mt-10 mb-10 container mx-auto">
+      <div class="flex gap-5">
+        <div class="flex-auto w-[60%] bg-white drop-shadow-lg rounded-2xl">
+          <div class="grid grid-cols-4 gap-3 p-5">
+            <!-- item 1 -->
+            <div
+              class="flex gap-2 text-start items-center bg-[#F4F7FF] p-8 rounded-md"
+            >
+              <div class="bg-white p-3 border rounded-full">
+                <img src="./assets/checkbox.png" alt="" />
+              </div>
+              <div>
+                <h1 class="font-medium">Task Assigned </h1>
+                <p id="taskAssigned" class="font-bold text-[#00303C] text-2xl">
+                  06
+                </p>
+              </div>
+            </div>
+            <!-- item 2 -->
+            <div
+              class="flex gap-2 col-span-2 text-start items-center discover_color p-8 rounded-md"
+            >
+              <div class="">
+                <img src="./assets/board.png" alt="" />
+              </div>
+              <div id="goBlogPage" class="cursor-pointer">
+                <h1 class="font-bold text-2xl text-white">
+                  Discover Something <br />
+                  New Today!
+                </h1>
+              </div>
+            </div>
+            <!-- item 3 -->
+
+            <div
+              class="flex gap-2 text-start items-center bg-[#F4F7FF] p-8 rounded-md"
+            >
+              <div class="bg-white p-3 border rounded-full">
+                <img src="./assets/calender.png" alt="" />
+              </div>
+              <div>
+                <h1 class="font-medium weekAdd"></h1>
+                <p class="font-bold mountDayYearAdd text-[#00303C] text-xl">
+                  Jul 28 2025
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-3 gap-3 p-5">
+            <!-- item 1 -->
+            <div class="bg-[#F4F7FF] p-5 space-y-5 rounded-lg">
+              <div class="">
+                <button class="btn bg-white">ShopEase</button>
+              </div>
+              <div class="space-y-5">
+                <h1
+                  id="addHeading"
+                  class="addHeading text-2xl font-bold text-[#00303C]"
+                >
+                  Fix Mobile Button Issue
+                </h1>
+                <p class="bg-white p-3 rounded-lg">
+                  Debug using Chrome DevTools, check for overlapping elements,
+                  and ensure onClick works ...
+                </p>
+              </div>
+
+              <div class="flex justify-between">
+                <div>
+                  <p>Deadline</p>
+                  <p class="text-xl font-bold text-[#00303C]">2023-02-20</p>
+                </div>
+                <div>
+                  <button class="btn complete_btn bg-[#3752FD] text-white">
+                    Completed
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- item 2 -->
+            <div class="bg-[#F4F7FF] p-5 space-y-5 rounded-lg">
+              <div class="">
+                <button class="btn bg-white">ShopEase</button>
+              </div>
+              <div class="space-y-5">
+                <h1
+                  id="addHeading"
+                  class="addHeading text-2xl font-bold text-[#00303C]"
+                >
+                  Add Dark Mode
+                </h1>
+                <p class="bg-white p-3 rounded-lg">
+                  Debug using Chrome DevTools, check for overlapping elements,
+                  and ensure onClick works ...
+                </p>
+              </div>
+
+              <div class="flex justify-between">
+                <div>
+                  <p>Deadline</p>
+                  <p class="text-xl font-bold text-[#00303C]">2023-02-20</p>
+                </div>
+                <div>
+                  <button class="btn complete_btn bg-[#3752FD] text-white">
+                    Completed
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- item 3 -->
+            <div class="bg-[#F4F7FF] p-5 space-y-5 rounded-lg">
+              <div class="">
+                <button class="btn bg-white">ShopEase</button>
+              </div>
+              <div class="space-y-5">
+                <h1
+                  id="addHeading"
+                  class="addHeading text-2xl font-bold text-[#00303C]"
+                >
+                  Optimize Home page 
+                </h1>
+                <p class="bg-white p-3 rounded-lg">
+                  Debug using Chrome DevTools, check for overlapping elements,
+                  and ensure onClick works ...
+                </p>
+              </div>
+
+              <div class="flex justify-between">
+                <div>
+                  <p>Deadline</p>
+                  <p class="text-xl font-bold text-[#00303C]">2023-02-20</p>
+                </div>
+                <div>
+                  <button class="btn complete_btn bg-[#3752FD] text-white">
+                    Completed
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- item 4 -->
+            <div class="bg-[#F4F7FF] p-5 space-y-5 rounded-lg">
+              <div class="">
+                <button class="btn bg-white">ShopEase</button>
+              </div>
+              <div class="space-y-5">
+                <h1
+                  id="addHeading"
+                  class="addHeading text-2xl font-bold text-[#00303C]"
+                >
+                  Add new emoji 🤲
+                </h1>
+                <p class="bg-white p-3 rounded-lg">
+                  Debug using Chrome DevTools, check for overlapping elements,
+                  and ensure onClick works ...
+                </p>
+              </div>
+
+              <div class="flex justify-between">
+                <div>
+                  <p>Deadline</p>
+                  <p class="text-xl font-bold text-[#00303C]">2023-02-20</p>
+                </div>
+                <div>
+                  <button class="btn complete_btn bg-[#3752FD] text-white">
+                    Completed
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- item 5 -->
+            <div class="bg-[#F4F7FF] p-5 space-y-5 rounded-lg">
+              <div class="">
+                <button class="btn bg-white">ShopEase</button>
+              </div>
+              <div class="space-y-5">
+                <h1
+                  id="addHeading"
+                  class="addHeading text-2xl font-bold text-[#00303C]"
+                >
+                  Integrate OpenAI API
+                </h1>
+                <p class="bg-white p-3 rounded-lg">
+                  Debug using Chrome DevTools, check for overlapping elements,
+                  and ensure onClick works ...
+                </p>
+              </div>
+
+              <div class="flex justify-between">
+                <div>
+                  <p>Deadline</p>
+                  <p class="text-xl font-bold text-[#00303C]">2023-02-20</p>
+                </div>
+                <div>
+                  <button class="btn complete_btn bg-[#3752FD] text-white">
+                    Completed
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- item 6 -->
+            <div class="bg-[#F4F7FF] p-5 space-y-5 rounded-lg">
+              <div class="">
+                <button class="btn bg-white">ShopEase</button>
+              </div>
+              <div class="space-y-5">
+                <h1 id="" class="addHeading text-2xl font-bold text-[#00303C]">
+                  Improve Job searching
+                </h1>
+                <p class="bg-white p-3 rounded-lg">
+                  Debug using Chrome DevTools, check for overlapping elements,
+                  and ensure onClick works ...
+                </p>
+              </div>
+
+              <div class="flex justify-between">
+                <div>
+                  <p>Deadline</p>
+                  <p class="text-xl font-bold text-[#00303C]">2023-02-20</p>
+                </div>
+                <div>
+                  <button class="btn complete_btn bg-[#3752FD] text-white">
+                    Completed
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="flex-auto bg-white drop-shadow-lg rounded-2xl p-5">
+          <div class="mt-5 flex justify-center items-center gap-2">
+            <div>
+              <img src="./assets/activity.png" alt="" class="mx-auto w-5" />
+            </div>
+            <p class="text-[#00303C] text-xl">Activity Log</p>
+          </div>
+          <div class="text-center mt-5">
+            <button
+              id="clearHistoryButton"
+              class="btn bg-[#3752FD] mx-auto text-white"
+            >
+              Clear History
+            </button>
+          </div>
+          <div id="PTagAppendChild" class="text-center w-full mt-3"></div>
+        </div>
+      </div>
+    </section>
+    <script>
+      document
+        .getElementById("goBlogPage")
+        .addEventListener("click", function () {
+          window.location.href = "blog.html";
+        });
+    </script>
+
+    <script src="./Script/script.js"></script>
+  </body>
+</html>
