@@ -8,19 +8,17 @@ for (let i = 0; i < completedBtn.length; i++) {
     const taskCount = parseInt(taskAssignedEl.innerText);
     const HeaderButton = document.getElementById("HeaderButton");
     const HeaderButtonCount = parseInt(HeaderButton.innerText);
-    const addHeadings = document.querySelectorAll(".addHeading");
+    const btn = event.target;
+    const heading =
+      btn.parentNode.parentNode.previousElementSibling.querySelector(
+        ".addHeading"
+      );
+
     const PTagAppendChild = document.getElementById("PTagAppendChild");
-    // console.log(addHeadings);
-
-    for (let i = 0; i < addHeadings.length; i++) {
-      heading = addHeadings[i].innerText;
-      console.log(heading);
-
-      const newHeading = document.createElement("h2");
-      newHeading.innerText = "You have completed" + heading;
-      PTagAppendChild.appendChild(newHeading);
-      // console.log(newHeading.innerText);
-    }
+    console.log(PTagAppendChild);
+    newHeading = document.createElement("p");
+    newHeading.textContent = heading.textContent;
+    PTagAppendChild.appendChild(newHeading);
 
     document
       .getElementById("clearHistoryButton")
@@ -61,7 +59,6 @@ function updateDate() {
     .toLocaleDateString("en-US", mountDayYear)
     .replace(",", "");
 
-  console.log(WeekDayConvert, mountDayYearConvert);
   document.querySelector(".weekAdd").innerText = WeekDayConvert + ", ";
   document.querySelector(".mountDayYearAdd").innerText = mountDayYearConvert;
 }
@@ -71,7 +68,3 @@ updateDate();
 document.getElementById("goBlogPage").addEventListener("click", function () {
   window.location.href = "/blog.html";
 });
-
-// document.getElementById("backToDeskBtn").addEventListener("click", function () {
-//   window.location.replace = "/index.html";
-// });
