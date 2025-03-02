@@ -18,7 +18,6 @@ for (let i = 0; i < completedBtn.length; i++) {
       );
 
     const PTagAppendChild = document.getElementById("PTagAppendChild");
-    console.log(PTagAppendChild);
     newHeading = document.createElement("p");
     newHeading.style.backgroundColor = "#f0f8ff";
     newHeading.style.padding = "10px";
@@ -58,7 +57,6 @@ for (let i = 0; i < completedBtn.length; i++) {
 
 function changeColor() {
   let randomColor = "#" + Math.floor(Math.random() * 16777215).toString(16);
-  console.log(randomColor);
   document.body.style.backgroundColor = randomColor;
 }
 
