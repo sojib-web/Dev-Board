@@ -1,5 +1,8 @@
 // @ts-nocheck
-
+function updateDates() {
+  const now = new Date();
+  return ` on  ${now.toLocaleTimeString()}`;
+}
 const completedBtn = document.querySelectorAll(".complete_btn");
 for (let i = 0; i < completedBtn.length; i++) {
   const btn = completedBtn[i];
@@ -17,7 +20,18 @@ for (let i = 0; i < completedBtn.length; i++) {
     const PTagAppendChild = document.getElementById("PTagAppendChild");
     console.log(PTagAppendChild);
     newHeading = document.createElement("p");
-    newHeading.textContent = heading.textContent;
+    newHeading.style.backgroundColor = "#f0f8ff";
+    newHeading.style.padding = "10px";
+    newHeading.style.marginTop = "20px";
+
+    if (typeof updateDates === "function") {
+      newHeading.textContent =
+        "You Have Completed the task " + heading.textContent + updateDates();
+    } else {
+      newHeading.textContent =
+        "You Have Completed the task " + heading.textContent;
+    }
+
     PTagAppendChild.appendChild(newHeading);
 
     document
